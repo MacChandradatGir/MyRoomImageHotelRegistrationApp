@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ecf2e4"
+    tools:context=".view.SecondActivity">
+
+    <TextView
+        android:id="@+id/hotel_name_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="25dp"
+        android:background="#a6992b"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:text="World ~ Classic ~ Resort"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:fontFamily="cursive"
+        android:textColor="#000"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/room_imageview"/>
+
+    <ImageView
+        android:id="@+id/room_imageview"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/image_1"
+        app:layout_constraintBottom_toTopOf="@+id/name_edittext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hotel_name_textview"/>
+
+    <TextView
+        android:id="@+id/roomnumber_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/room_imageview"
+        app:layout_constraintBottom_toBottomOf="@+id/room_imageview"
+        app:layout_constraintEnd_toStartOf="@+id/price_textview"
+        tools:text="Room Number"/>
+
+    <TextView
+        android:id="@+id/price_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/roomnumber_textview"
+        app:layout_constraintBottom_toBottomOf="@+id/room_imageview"
+        app:layout_constraintEnd_toEndOf="@+id/room_imageview"
+        tools:text="Price"/>
+
+    <EditText
+        android:id="@+id/name_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:inputType="textPersonName"
+        android:hint="Guest Name"
+        app:layout_constraintBottom_toTopOf="@+id/second_recycler_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/room_imageview" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/second_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="5dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/name_edittext"
+        app:layout_constraintBottom_toTopOf="@id/check_in_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/check_in_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Check in Guest"
+        android:textStyle="bold"
+        android:textColor="#000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+         />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
